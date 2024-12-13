@@ -29,7 +29,7 @@ kind create cluster --config kind.cfg
 ```bash
 kubectl kustomize "https://github.com/nginxinc/nginx-gateway-fabric/config/crd/gateway-api/standard?ref=v1.5.0" | kubectl apply -f -
 ```
-- Install `nginx fabricx gateway`
+- Install `nginx fabric gateway` using helm and the configuration defined using the `values.yaml` file
 ```bash
 helm uninstall ngf -n nginx-gateway
 helm install ngf oci://ghcr.io/nginxinc/charts/nginx-gateway-fabric --create-namespace -n nginx-gateway -f values.yaml
