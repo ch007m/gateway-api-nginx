@@ -1,13 +1,21 @@
+nginxGateway:
+  config:
+    logging:
+      level: debug
+
 service:
   type: NodePort
   ports:
+    - port: 8080
+      targetPort: 8080 # To be changed too as HTTP traffic will be sent to this port by the listener
+      nodePort: 31682
+      protocol: TCP
+      name: http-8080
     - port: 80
       targetPort: 80
-      nodePort: 31437
       protocol: TCP
       name: http
     - port: 443
       targetPort: 443
-      nodePort: 31438
       protocol: TCP
       name: https

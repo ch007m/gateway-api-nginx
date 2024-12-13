@@ -5,7 +5,8 @@ metadata:
 spec:
   gatewayClassName: nginx
   listeners:
+    # List of ports to be managed by the gateway
     - name: http
-      port: 80
+      port: 8080
       protocol: HTTP
       hostname: "*.localtest.me"
