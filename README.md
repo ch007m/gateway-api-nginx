@@ -6,19 +6,15 @@ https://blog.nashtechglobal.com/hands-on-kubernetes-gateway-api-with-nginx-gatew
 
 https://docs.nginx.com/nginx-gateway-fabric/get-started/
 
-The following scenario which has been tested successfully use the following port configuration between the `host`, the `container` and pod running the `nginx-fabric-gateway` or `ngf`:
+The following scenario which has been tested successfully use the port `8080` and the following configuration between the `host`, the `container` and pod running the `nginx-fabric-gateway` or `ngf`:
 
 * **HTTP traffic**
 
   localhost port: `8080` <-> podman container port: `31682`
 
-  kubernetes Service nodePort: `31682` <-> ngf's pod port: `80`
+  kubernetes Service nodePort: `31682` <-> ngf Gateway port & Service target port: `8080`
 
-* **HTTPS traffic**
-
-  localhost port: `8443` <-> podman container port: `443`
-
-  kubernetes Service nodePort: `30xxx` <-> ngf's pod port: `433`
+  **Note**: See discussion about using a different port: https://github.com/nginxinc/nginx-gateway-fabric/discussions/1697
 
 ## Instructions
 
