@@ -7,7 +7,7 @@ service:
   type: NodePort
   ports:
     - port: 8080
-      targetPort: 80
+      targetPort: 8080 # To be changed too as HTTP traffic will be sent to this port by the listener
       nodePort: 31682
       protocol: TCP
       name: http-8080
