@@ -10,11 +10,13 @@ The following scenario which has been tested successfully use the following port
 * **HTTP traffic**
 
   localhost port: `8080` <-> podman container port: `31437`
+
   kubernetes Service nodePort: `31437` <-> Pod container port: `80`
 
 * **HTTPS traffic**
 
   localhost port: `8443` <-> podman container port: `31438`
+
   kubernetes Service nodePort: `31438` <-> Pod container port: `433`
 
 ## Instructions
