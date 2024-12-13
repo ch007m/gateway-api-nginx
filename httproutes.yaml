@@ -5,7 +5,7 @@ metadata:
 spec:
   parentRefs:
     - name: gateway
-      sectionName: http-8080
+      sectionName: http
   hostnames:
     - "drink.localtest.me"
   rules:
@@ -24,7 +24,7 @@ metadata:
 spec:
   parentRefs:
     - name: gateway
-      sectionName: http-8080
+      sectionName: http
   hostnames:
     - "drink.localtest.me"
   rules:
