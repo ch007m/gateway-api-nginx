@@ -5,7 +5,9 @@ metadata:
 spec:
   gatewayClassName: nginx
   listeners:
-    - name: http
+    # The port to be used is 80 and not the external => 8080 which is only used on the host.
+    # This port corresponds to the internal port of the ngf's container / pod
+    - name: http-80
       port: 80
       protocol: HTTP
       hostname: "*.localtest.me"

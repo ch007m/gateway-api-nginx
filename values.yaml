@@ -1,8 +1,14 @@
+nginxGateway:
+  config:
+    logging:
+      level: debug
+
 service:
   type: NodePort
   ports:
     - port: 8080
       targetPort: 80
+      nodePort: 31682
       protocol: TCP
       name: http-8080
     - port: 80
