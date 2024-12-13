@@ -35,9 +35,6 @@ kubectl kustomize "https://github.com/nginxinc/nginx-gateway-fabric/config/crd/g
 ```bash
 helm uninstall ngf -n nginx-gateway
 helm install ngf oci://ghcr.io/nginxinc/charts/nginx-gateway-fabric --create-namespace -n nginx-gateway -f values.yaml
-...
-NAMESPACE            NAME                                         READY   STATUS    RESTARTS   AGE
-nginx-gateway        ngf-nginx-gateway-fabric-7667ddbc9d-4fq7f    1/2     Running   0          10s
 ```
 - Create the application resources:
 ```bash
