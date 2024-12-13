@@ -48,7 +48,7 @@ kubectl apply -f microservices.yaml
 kubectl delete -f gateway.yaml
 kubectl apply -f gateway.yaml
 ```
-- Create the `HTTPRoutes` resources
+- Create the `HTTPRoutes` resources to bind the hostname `cafe|tea.localtest.me` to the microservice's path: `/coffee` or `/tea`
 ```bash
 kubectl delete -f httproutes.yaml
 kubectl apply -f httproutes.yaml
