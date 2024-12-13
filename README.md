@@ -3,6 +3,7 @@
 ## Introduction
 
 https://blog.nashtechglobal.com/hands-on-kubernetes-gateway-api-with-nginx-gateway-fabric/
+
 https://docs.nginx.com/nginx-gateway-fabric/get-started/
 
 The following scenario which has been tested successfully use the following port configuration between the `host`, the `container` and pod running the `nginx-fabric-gateway` or `ngf`:
