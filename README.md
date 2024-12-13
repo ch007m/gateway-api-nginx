@@ -36,14 +36,13 @@ kubectl kustomize "https://github.com/nginxinc/nginx-gateway-fabric/config/crd/g
 helm uninstall ngf -n nginx-gateway
 helm install ngf oci://ghcr.io/nginxinc/charts/nginx-gateway-fabric --create-namespace -n nginx-gateway -f values.yaml
 ```
-- Create the application resources:
+- Deploy the `cafe` and `tea` microservices using the following demo project: https://github.com/nginxinc/NGINX-Demos/tree/master/nginx-hello
 ```bash
 kubectl delete -f microservices.yaml
 kubectl apply -f microservices.yaml
 ```
-**Remark**: github project: https://github.com/nginxinc/NGINX-Demos/tree/master/nginx-hello
 
-- Create the `Gateway` resource
+- Create the `Gateway` resource able to consume the traffic on the port `80`
 
 ```bash
 kubectl delete -f gateway.yaml
