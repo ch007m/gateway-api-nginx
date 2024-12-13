@@ -9,15 +9,15 @@ The following scenario which has been tested successfully use the following port
 
 * **HTTP traffic**
 
-  localhost port: `8080` <-> podman container port: `31437`
+  localhost port: `8080` <-> podman container port: `80`
 
-  kubernetes Service nodePort: `31437` <-> ngf's pod port: `80`
+  kubernetes Service nodePort: `30xxx` <-> ngf's pod port: `80`
 
 * **HTTPS traffic**
 
-  localhost port: `8443` <-> podman container port: `31438`
+  localhost port: `8443` <-> podman container port: `443`
 
-  kubernetes Service nodePort: `31438` <-> ngf's pod port: `433`
+  kubernetes Service nodePort: `30xxx` <-> ngf's pod port: `433`
 
 ## Instructions
 
