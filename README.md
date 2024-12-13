@@ -48,21 +48,21 @@ kubectl apply -f microservices.yaml
 kubectl delete -f gateway.yaml
 kubectl apply -f gateway.yaml
 ```
-- Create the `HTTPRoutes` resources to bind the hostname `cafe|tea.localtest.me` to the microservice's path: `/coffee` or `/tea`
+- Create the `HTTPRoutes` resources to bind the hostname `drink.localtest.me` to the microservice's path: `/coffee` or `/tea`
 ```bash
 kubectl delete -f httproutes.yaml
 kubectl apply -f httproutes.yaml
 ```
 - curl the service
 ```bash
-curl http://cafe.localtest.me:8080/coffee
+curl http://drink.localtest.me:8080/coffee
 Server address: 10.244.0.11:8080
 Server name: coffee-6db967495b-gv7q4
 Date: 13/Dec/2024:13:18:58 +0000
 URI: /coffee
 Request ID: 158cafccd8e407bb1dd5ebe3f9a0abf4
 
-curl http://tea.localtest.me:8080/tea
+curl http://drink.localtest.me:8080/tea
 Server address: 10.244.0.10:8080
 Server name: tea-7b7d6c947d-q8gjr
 Date: 13/Dec/2024:13:18:58 +0000
